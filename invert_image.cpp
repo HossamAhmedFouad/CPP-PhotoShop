@@ -12,29 +12,28 @@
 #include "bmplib.h"
 
 using namespace std;
-unsigned char image[SIZE][SIZE];
+unsigned char imageI[SIZE][SIZE];
 
-void loadImage();
-void saveImage();
+void loadImageI();
+void saveImageI();
 void invertImage();
 
-int main(){
-    cout<<"Hi"<<endl;
-    loadImage();
+void invert(){
+    loadImageI();
     invertImage();
-    saveImage();
+    saveImageI();
 }
 
-void loadImage(){
+void loadImageI(){
     char file_name[100];
     //get file
     cout <<"Enter file name: ";
     cin>>file_name;
     cout<<endl;
     strcat(file_name,".bmp");
-    readGSBMP(file_name,image);
+    readGSBMP(file_name,imageI);
 }
-void saveImage () {
+void saveImageI() {
     char file_name[100];
 
     // Get gray scale image target file name
@@ -44,14 +43,14 @@ void saveImage () {
 
     // Add to it .bmp extension and save image
     strcat (file_name, ".bmp");
-    writeGSBMP(file_name, image);
+    writeGSBMP(file_name, imageI);
 }
 
 void invertImage(){
     for(int i = 0; i < SIZE; i++){
         for(int j = 0; j < SIZE; j++){
             //invert each bit in the pixels
-            image[i][j] ^= 0xFF  ;
+            imageI[i][j] ^= 0xFF  ;
         }
     }
 }

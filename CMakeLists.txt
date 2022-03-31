@@ -8,3 +8,6 @@ include_directories(.)
 add_executable(CS112_Assignment_3
         invert_image.cpp bmplib.cpp)
 
+add_executable(Rotate rotate_image.cpp bmplib.cpp)
+
+
