@@ -1,2 +1,2 @@
-# CS112-Assignment-3
-This is a repository for FCAI-CU team members working on CS112 Assignment 3 project
+# CPP-Photoshop
+## In this project, me and my team have implemented the basic photo editing techniques in CPP such as mirror, rotation, etc.. on a 256 x 256 images which are colored or gray and white
